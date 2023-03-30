@@ -1,0 +1,519 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()local Window = OrionLib:MakeWindow({Name = "Qoi Mini Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Hubs Section"
+})
+
+Tab:AddButton({
+	Name = "Game hub",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/TakeModzz/Games-HUB-Destroyer-V4/main/Games%20HUB%20Destroyer%20V4"))() 	end    
+})
+
+
+Tab:AddButton({
+	Name = "Coco hub",
+	Callback = function()
+      		print("button pressed")
+loadstring(game:HttpGet(('https://gitlab.com/cococc/cocohub/-/raw/master/CocoLoader'),true))()  	end    
+})
+
+
+Tab:AddButton({
+	Name = "DCC Hub(Murder mystery Hub",
+	Callback = function()
+      		print("button pressed")
+ local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+
+local Window = Library.CreateLib("DCC Loader", "DarkTheme")
+
+-- Tabs
+
+local Tab1 = Window:NewTab("mm2")
+
+local Tab1Section = Tab1:NewSection("mm2 scripts")
+
+-- Nothing
+
+Tab1Section:NewButton("DDC Hub", "Hub", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VaniaPerets/FolderGui-FolderHub/main/DarkCheatClient(Hub)Version1.0.9.lua", true))()
+
+end)
+
+Tab1Section:NewButton("DDC Gui", "Hub", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VaniaPerets/FolderGui-FolderHub/main/FolderGuiVersion2.0.1.lua", true))()
+
+end)
+
+Tab1Section:NewButton("DDC Commands(mm2)(in development)", "Hub", function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/ANUKRMHC"))()
+
+end) 	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Other Section"
+})
+
+
+Tab:AddButton({
+	Name = "Simple cham",
+	Callback = function()
+      		print("button pressed")
+  local Players = game:GetService("Players"):GetChildren()
+
+local RunService = game:GetService("RunService")
+
+local highlight = Instance.new("Highlight")
+
+highlight.Name = "Highlight"
+
+
+
+for i, v in pairs(Players) do
+
+    repeat wait() until v.Character
+
+    if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+
+        local highlightClone = highlight:Clone()
+
+        highlightClone.Adornee = v.Character
+
+        highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+
+        highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+
+        highlightClone.Name = "Highlight"
+
+    end
+
+end
+
+
+
+game.Players.PlayerAdded:Connect(function(player)
+
+    repeat wait() until player.Character
+
+    if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+
+        local highlightClone = highlight:Clone()
+
+        highlightClone.Adornee = player.Character
+
+        highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart")
+
+        highlightClone.Name = "Highlight"
+
+    end
+
+end)
+
+
+
+game.Players.PlayerRemoving:Connect(function(playerRemoved)
+
+    playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
+
+end)
+
+
+
+RunService.Heartbeat:Connect(function()
+
+    for i, v in pairs(Players) do
+
+        repeat wait() until v.Character
+
+        if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+
+            local highlightClone = highlight:Clone()
+
+            highlightClone.Adornee = v.Character
+
+            highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+
+            highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+
+            highlightClone.Name = "Highlight"
+
+            task.wait()
+
+        end
+
+end
+
+end)	end    
+})
+
+Tab:AddButton({
+	Name = "My discord",
+	Callback = function()
+      		print("button pressed")
+OrionLib:MakeNotification({
+	Name = "My discord!",
+	Content = "Zyruss#0307",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})  	end    
+})
+
+Tab:AddButton({
+	Name = " teleport tool",
+	Callback = function()
+      		print("button pressed")
+
+ mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Equip to Click TP"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack 	end    
+})
+
+Tab:AddButton({
+	Name = "Invis tool",
+	Callback = function()
+      		print("button pressed")
+loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)",true))()  	end    
+})
+
+Tab:AddButton({
+	Name = "cmd x",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source', true))() 	end    
+})
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Murder Mystery 2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})local Section = Tab:AddSection({
+	Name = "Section"
+})
+
+Tab:AddButton({
+	Name = "eclipse gui",
+	Callback = function()
+      		print("button pressed")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))()  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Symphony hub",
+	Callback = function()
+      		print("button pressed")
+ local a,b,c,d=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,"https://itsjidy.github.io/SymphonyHub/Loader.html"c(a and b, "Your Executor does not support.")a(b({Url=d,Method="GET"}).Body)() 	end    
+})
+
+Tab:AddButton({
+
+
+	Name = "dreadzHub",
+	Callback = function()
+      		print("button pressed")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DreadzHub2/DreadzHub-Scripts-FR/main/Loader"))()  	end    
+})
+
+Tab:AddButton({
+	Name = "Lunar Hub",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))()
+ 	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Blox fruit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "Neva Script",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))() 	end    
+})
+
+
+
+
+Tab:AddButton({
+	Name = "Putaya script",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/Putaya/HITBOXKAK/main/PutayaFree'))() 	end    
+})
+
+
+Tab:AddButton({
+	Name = "Speed hub X",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Doors",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Doors gui",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/zoophiliaphobic/POOPDOORS/main/script.lua'))() 	end    
+})
+
+
+Tab:AddButton({
+	Name = "Chiba hub",
+	Callback = function()
+      		print("button pressed")
+ --https://raw.githubusercontent.com/KindIhave/ChibaHubcomeback/main/Chiba-Doors.txt
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/KindIhave/ChibaHubcomeback/main/Chiba-Doors.txt'),true))() 	end    
+})
+
+
+Tab:AddButton({
+	Name = "Nerd doors script",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/DoorsV3_ByNerd.lua"))() 	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Hard more script will activate hard mode"
+})
+
+Tab:AddButton({
+	Name = "Hard mode script",
+	Callback = function()
+      		print("button pressed")
+  loadstring(Game:HttpGet("https://pastebin.com/raw/RgXSaf2D", true))()	end    
+})
+
+
+Tab:AddButton({
+	Name = "entity spawner",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://scriptblox.com/raw/DOORS-Summon-Entities-V4-6983"))() 	end    
+})
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Da Hood script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+
+Tab:AddButton({
+	Name = "Da hood op script",
+	Callback = function()
+      		print("button pressed")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexrandom/Lua/main/DaHood", true))()  	end    
+})
+
+Tab:AddButton({
+	Name = "swag mode script",
+	Callback = function()
+      		print("button pressed")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()  	end    
+})
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Lucky block battle ground script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "Luckyblock gui",
+	Callback = function()
+      		print("button pressed")
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe2/ToraIsMe2/main/0lucky", true))()	end    
+})
+
+Tab:AddButton({
+	Name = "lucky block script",
+	Callback = function()
+      		print("button pressed")
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/scripts/main/LUCKY%20BLOCKS%20Battlegrounds'),true))()  	end    
+})
+
+Tab:AddButton({
+	Name = "Luckyblock op Script ",
+	Callback = function()
+      		print("button pressed")
+  loadstring(game:HttpGet("https://pastebin.com/raw/t0MikWVy"))()	end    
+})
+
+Tab:AddButton({
+	Name = "Luckyblock op script 2",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/scripts/main/LUCKY%20BLOCKS%20Battlegrounds'),true))()	end    
+})
+
+
+local Tab = Window:MakeTab({
+
+
+	Name = "Chaos ",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "Chaos Op script",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))() 	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Break in story",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "X HUB",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/XHub/main/HubLoader.lua", true))() 	end    
+})
+
+
+Tab:AddButton({
+	Name = "Proxima hub",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))() 	end    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Tycoons",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "All tycoons script",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://pastebin.com/raw/U9WBdeFe"))() 	end    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Kill monsters to save princess",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Op gui(Use a private server it's just free",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe2/ToraIsMe2/main/0killmon", true))() 	end    
+})
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Bedwars script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+Tab:AddButton({
+	Name = "VeztWare script",
+	Callback = function()
+      		print("button pressed")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VeztWare/Vezt/main/Vezt%20-%20Bedwars%20%E2%80%A2%20V2.lua"))()  	end    
+})
+
+
+Tab:AddButton({
+	Name = "VapeV4(Need keyboard",
+	Callback = function()
+      		print("button pressed")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))() 	end    
+})
